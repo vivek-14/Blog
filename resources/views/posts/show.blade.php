@@ -4,7 +4,7 @@
         <div class="col-span-4 mb-10 lg:pt-14 lg:text-center">
             <img
                 class="rounded-xl"
-                src="{{ asset('images/illustration-1.png') }}"
+                src="{{ $post->thumbnail ? asset('storage/' . $post->thumbnail) : asset('storage/thumbnails/default.png') }}"
                 alt=""
             >
 

@@ -18,7 +18,7 @@
                             id="title"
                             name="title"
                             type="text"
-                            value="{{ old('title') ?? $data['post']->title }}"
+                            value="{{ old('title', $data['post']->title) }}"
                             label="Title"
                             autocomplete="title"
                         />

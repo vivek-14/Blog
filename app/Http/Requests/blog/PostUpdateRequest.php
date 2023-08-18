@@ -25,7 +25,7 @@ class PostUpdateRequest extends FormRequest
         return [
             'title' => ['required', 'string', 'max:255'],
             'body' => 'required|min:10',
-            'excerpt' => 'required|string|max:255',
+            'excerpt' => 'required|min:20',
             'category_id' => ['required', Rule::exists('categories', 'id')],
             'thumbnail' => 'image|mimes:jpeg,png,gif|max:2048'
         ];

@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
 /**
@@ -11,7 +12,7 @@ use Illuminate\Support\Str;
  */
 class UserFactory extends Factory
 {
-//    protected $model = User::class;
+    //    protected $model = User::class;
 
     /**
      * Define the model's default state.
@@ -26,7 +27,7 @@ class UserFactory extends Factory
             'email' => fake()->unique()->safeEmail(),
             'email_verified_at' => now(),
             'is_admin' => fake()->boolean(),
-            'password' => bcrypt(fake()->password()),  // password
+            'password' => Hash::make('password'),
             'remember_token' => Str::random(10),
         ];
     }

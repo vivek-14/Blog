@@ -12,7 +12,7 @@
         placeholder="{{ $placeholder }}"
         cols="{{ $cols }}"
         rows="{{ $rows }}"
-    >{{ $value }}</textarea>
+    >{!! $value !!}</textarea>
 
     @error($name)
         <x-elements.form.error-message message="{{ $message }}" />

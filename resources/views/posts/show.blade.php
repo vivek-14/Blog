@@ -67,7 +67,7 @@
             </h1>
 
             <div class="space-y-4 leading-loose lg:text-lg">
-                {!! $post->body !!}
+                <p>{!! $post->body !!}</p>
             </div>
         </div>
 
